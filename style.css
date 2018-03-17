@@ -1,0 +1,12 @@
+.textelement {
+    width: 700px;
+    height: auto;
+    left: 172px;
+    border: medium;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(190, 250, 250, .6);
+    /* background-color:#999999; */
+    padding: 10px 50px;
+    border-radius: 10px;
+}
