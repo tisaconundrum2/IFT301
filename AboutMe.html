@@ -1,4 +1,6 @@
 <!--
+Nicholas Finch - IFT 301
+
 Create a basic HTML page that describes you. (You have to use HTML code editors such as Windows Notepad++ or Mac Sublime editors. If you have some other code editor that you are familiar with, you may use that as well.) On your page, include some or all of the following information:
 
 [x] Your name
@@ -34,6 +36,18 @@ Points for this assignment:
     13[x] ul li
     14[x] center
 
+Using your already created page "About Me" that describes you, include the following information:
+
+[x] An unordered or descriptive list is added for the list of classes currently you are taking at ASU.
+[x] Line Breaks and a horizontal rule to be added after the list of classes.
+[x] Create an ordered list of your 3 favorite movies, books, or TV shows you have listed.
+[x] Create an unordered list for your achievable goals for this year.
+[x] Create a definition list to explain if the movie/book/TV show is fiction, action, comedy and so forth.
+[x] Add a comment tag in the head with your name:
+[x] Validate your code
+[x] Confirm that the code is properly indented. (neatness counts) (items nested within elements must be indented)
+[x] Save the changes to your already existing file AboutMe.html
+[x] Submit the URL in the comments section in the submission link
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -44,8 +58,7 @@ Points for this assignment:
 </head>
 <body>
 <div class="textelement">
-            <pre>
-                <code>
+            <pre>                <code>
 from about import me
 import sys
 import Image
@@ -68,9 +81,7 @@ class IFT301:
 
     <p>Welcome to the <strong>"About Me"</strong> section of my Website</p>
 
-    <img src="images/me.jpg" class="center"
-         id="selfie"
-         width="300px">
+    <img src="images/me.jpg" class="center" id="selfie" width="300px">
 
     <dl>
         <dt>Hello, my name is Nicholas.</dt>
@@ -87,32 +98,49 @@ class IFT301:
         <li>IFT 301 Web Programming for HCI</li>
     </ul>
 
+    <hr>
+
     <strong>My Favorite Movies</strong>
 
-    <p>
-    <center>
-        <img src="images/titanae.jpg"
-             height="450">
-        &nbsp;
-        <img src="images/italianjob.jpg"
-             height="450">
-        &nbsp;
-        <img src="images/arrival.jpg"
-             height="450">
-    </center>
-    </p>
+    <div class="movies">
+        <div style="display: inline-block" class="poster">
+            <img src="images/titanae.jpg" height="450">
+            <dt>Titan AE</dt>
+            <dd>Science Fiction</dd>
+        </div>
+        <div style="display: inline-block" class="poster">
+            <img src="images/italianjob.jpg" height="450">
+            <dt>Italian Job</dt>
+            <dd>Comedy, Fiction</dd>
+        </div>
+        <div style="display: inline-block" class="poster">
+            <img src="images/arrival.jpg" height="450">
+            <dt>Arrival</dt>
+            <dd>Science Fiction</dd>
+        </div>
+    </div>
+    <p></p>
+
+    <hr>
 
     <strong>Most Recent Show I've Watched</strong>
 
     <p>
-        <center>
-            <a href="http://www.imdb.com/title/tt5753856/"><img
-                    src="images/dark.jpg"
-                    height="450"></a>
-    <p>A family saga with a supernatural twist, set in a German town, where the disappearance of two young children
-        exposes the relationships among four families.</p>
-    </center>
     </p>
+    <div class="movies">
+        <div style="display: inline-block" class="poster">
+            <a href="http://www.imdb.com/title/tt5753856/"><img src="images/dark.jpg" height="450"></a>
+            <dt>A family saga with a supernatural twist, set in a German town, where the disappearance of two young
+                children
+                exposes the relationships among four families.
+            </dt>
+        </div>
+    </div>
+
+
+    <p></p>
+
+    <hr>
 
     <strong>Achievable Target Goals</strong>
     <ul>
@@ -120,6 +148,8 @@ class IFT301:
         <li>Learn a new programming language</li>
         <li>Complete a fleshed out website</li>
     </ul>
+
+    <hr>
 
     <strong>Me when I'm Happey</strong>
     <p>
@@ -131,6 +161,7 @@ class IFT301:
         <img src="images/complex.jpg" class="center" width="450">
     </p>
 
+    <hr>
 
     <strong>Interesting Stuff About Me</strong>
 
@@ -150,6 +181,8 @@ class IFT301:
         was all just downhill. I started diving into far more complex things and began involving myself more in
         technology and computers.
     </p>
+
+    <hr>
 
     <strong>Personal interests</strong>
 
