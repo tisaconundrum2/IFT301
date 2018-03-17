@@ -11,7 +11,8 @@
     border-radius: 10px;
 }
 
-/* center class for images
+/* Somtimes I want the images in the center
+ * here's that option
  */
 .center {
     display: block;
