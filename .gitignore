@@ -1,4 +1,3 @@
 # Ignore Idea content
 .idea/*
-.idea/vcs.xml
 *.stackdump
