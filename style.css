@@ -1,12 +1,24 @@
 .textelement {
-    width: 700px;
     height: auto;
     left: 172px;
     border: medium;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(190, 250, 250, .6);
+    margin: 1% 10%;
+    background: rgba(214, 214, 214, 0.6);
     /* background-color:#999999; */
     padding: 10px 50px;
     border-radius: 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#selfie{
+    border-radius: 50%;
+}
+
+p {
+    margin-left: 50px;
 }

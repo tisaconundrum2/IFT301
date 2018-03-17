@@ -5,12 +5,12 @@ Create a basic HTML page that describes you. (You have to use HTML code editors 
 [x] A description of yourself in two sentences or less.
 [x] Emphasize the most important <strong>words</strong> by putting them in bold.
 [x] A list of classes you are taking right now at ASU.
-[ ] Your 3 favorite movies, books, or TV shows, in order.
-[ ] Make at least one link to an interesting site about a TV show/movie/book you have read recently.
-[ ] Your achievable target goals relating to your school/work for this year.
+[x] Your 3 favorite movies, books, or TV shows, in order.
+[x] Make at least one link to an interesting site about a TV show/movie/book you have read recently.
+[x] Your achievable target goals relating to your school/work for this year.
 [ ] Two images,
-[ ] represents you when you're happy
-[ ] represents you are in front of the system working.
+    [ ] represents you when you're happy
+    [ ] represents you are in front of the system working.
 [ ] Something interesting about you, your friends or family members.
 
 [ ] save page as AboutMe.html
@@ -32,6 +32,7 @@ Points for this assignment:
     11[x] meta
     12[x] dl dt dd
     13[x] ul li
+    14[x] center
 
 -->
 <!DOCTYPE html>
@@ -45,29 +46,31 @@ Points for this assignment:
 <div class="textelement">
             <pre>
                 <code>
-import sys
 from about import me
+import sys
+import Image
 
-import Image, ImageDraw
+class IFT301:
+    def __init__(self, information):
+        self.information = information
+        self.aboutme()
 
-class eng102:
-def __init__(self, information):
-self.information = information
-self.aboutme()
-
-def aboutme(self):
-sys.start(aboutMeSection(self.information))
-Image.open("photoOfMe.png")
-sys.start(backgroundAndFamily())
-sys.start(academic())
-sys.start(personalInterests())
-Image.open("LifeIsAnOpenField.png")
+    def aboutme(self):
+        sys.start(aboutMeSection(self.information))
+        Image.open("photoOfMe.png")
+        sys.start(backgroundAndFamily())
+        sys.start(academic())
+        sys.start(personalInterests())
+        Image.open("LifeIsAnOpenField.png")
                 </code>
             </pre>
     <hr>
 
     <p>Welcome to the <strong>"About Me"</strong> section of my Website</p>
 
+    <img src="https://s3.amazonaws.com/files.digication.com/M5c5f560f66abbedce1c544e727bbd4d0.jpg" class="center"
+         id="selfie"
+         width="300px">
 
     <dl>
         <dt>Hello, my name is Nicholas.</dt>
@@ -84,12 +87,52 @@ Image.open("LifeIsAnOpenField.png")
         <li>IFT 301 Web Programming for HCI</li>
     </ul>
 
-    <strong>Major Background</strong>
+    <strong>My Favorite Movies</strong>
 
-    <p>I'll try to keep this short</p>
+    <p>
+    <center>
+        <img src="https://ia.media-imdb.com/images/M/MV5BYTVkYTAyZDMtYzNmYi00OTkyLTg3M2ItNmE0MDZkNmY3Y2I3XkEyXkFqcGdeQXVyNjU2MDUzMjY@._V1_SY1000_CR0,0,640,1000_AL_.jpg"
+             height="450">
+        &nbsp;
+        <img src="https://ia.media-imdb.com/images/M/MV5BNDYyNzYxNjYtNmYzMC00MTE0LWIwMmYtNTAyZDBjYTIxMTRhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SY1000_CR0,0,666,1000_AL_.jpg"
+             height="450">
+        &nbsp;
+        <img src="https://ia.media-imdb.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_SY1000_CR0,0,640,1000_AL_.jpg"
+             height="450">
+    </center>
+    </p>
+
+    <strong>Most Recent Show I've Watched</strong>
+
+    <p>
+        <center>
+            <a href="http://www.imdb.com/title/tt5753856/"><img
+                    src="https://ia.media-imdb.com/images/M/MV5BMTUzNjQ2MTY5NV5BMl5BanBnXkFtZTgwOTAzNTQxNDM@._V1._SX600_SY600_.jpg"
+                    height="450"></a>
+    <p>A family saga with a supernatural twist, set in a German town, where the disappearance of two young children
+        exposes the relationships among four families.</p>
+    </center>
+    </p>
+
+    <strong>Achievable Target Goals</strong>
+    <ul>
+        <li>Travel to a new state</li>
+        <li>Learn a new programming language</li>
+        <li>Complete a fleshed out website</li>
+    </ul>
+
+    <strong>Me when I'm Happey</strong>
+    <p>
+        <img src="https://s3.amazonaws.com/files.digication.com/M09118e5d376963cce91c79e7357955ce.jpg" class="center">
+    </p>
+
+    <strong>Me When I'm Focused</strong>
+
+
+    <strong>Interesting Stuff About Me</strong>
 
     <p>Well, you already know my name, but my name is Nicholas. I'm a software developer at the United States
-        Geological Survey located in Flagstaff Arizona. I've been working there for about a year now and I found out
+        Geological Survey located in Flagstaff Arizona. I've been working there for about 2 years now and I found out
         about ASU online through the most unlikely of places. It happens to be an advertisement from Facebook. But
         given how many people like the advertisement or at least react to it I would imagine that it's making a
         significant impact. But less about that, more about my history. I'm from the Philippines; I was adopted when
@@ -99,30 +142,10 @@ Image.open("LifeIsAnOpenField.png")
         Information Technology.
     </p>
 
-    <strong>Academic interests and experiences</strong>
-
-    <p>As for my academic interests and experiences. I come from a rich background in Technology and science, so I
-        tend to dive very deeply into computers and robotics. Of course, if you have any questions about these
-        topics, I'd be more than happy to tell you about them. In fact, I run the NAU robotics Club here in Flagstaff. I
-        spend most of my time teaching people the basics of electrical engineering and computer science.
-    </p>
     <p>I knew I wanted to get into this field around the age of 14. And why is 14 so significant to me? It was at
         this age that I had designed a fully-functional artificial intelligent chat robot, and from that point on it
         was all just downhill. I started diving into far more complex things and began involving myself more in
         technology and computers.
-    </p>
-
-    <strong>Colleges and Universities attended (include Arizona State University)</strong>
-
-    <p>I momentarily attended NAU out of a funny reason. My father, at the time, had owned land in Arizona and
-        thought that he could get me a cheaper tuition rate given that fact. What we, of course, come to find out,
-        is that we can't do that. But my whole family and I had fallen in love with NAU so I decided to attend
-        anyways despite the fact that I couldn't get a lower tuition. However, attending this school was not all
-        sunshine and roses. The school started to go through many different changes, many of them I didn't like. And
-        so I had to make a decision on whether I would continue to stay or try to move on and find something that
-        would fit me. Of course, I chose the latter because here I am at Arizona State University. I'm hoping that
-        by taking these online classes I'll do significantly better and still be able to hold on to a part-time
-        job.
     </p>
 
     <strong>Personal interests</strong>
@@ -135,12 +158,12 @@ Image.open("LifeIsAnOpenField.png")
         through nature can yield some nice results.
     </p>
     <p>
-        If you've made it this far, thank you for reading a little about me. And it is clear, I failed at keeping this
-        short.
+        If you've made it this far, thank you for reading a little about me.
     </p>
     <p>
         ¯\_(ツ)_/¯
     </p>
+
 </div>
 </body>
 </html>
