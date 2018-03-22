@@ -1,49 +1,262 @@
-/*class for all of our content to sit in
- */
-.textelement {
-    height: auto;
-    left: 172px;
-    border: medium;
-    margin: 1% 10%;
-    background: rgba(214, 214, 214, 0.6);
-    padding: 10px 50px;
-    border-radius: 10px;
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
 }
 
-/* Somtimes I want the images in the center
- * here's that option
- */
-.center {
+#page-border {
+    background: #F5F5F5;
+    margin: 20px;
+}
+
+@media screen and (max-width: 540px) {
+    #page-border {
+        margin: 14px;
+    }
+}
+
+#wrap, .wrap {
+    padding: 20px 0;
+}
+
+.clearfix:after, .container:after, .list-hex-grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1180px) {
+    .container {
+        width: 960px;
+    }
+}
+
+.container {
+    width: 1120px;
+}
+
+@media screen and (max-width: 898px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 1016px) {
+    .container {
+        width: 840px;
+    }
+}
+
+@media screen and (max-width: 1016px) {
+    .container {
+        width: 984px;
+    }
+}
+
+.clearfix, .container, .list-hex-grid {
+    *zoom: 1;
+}
+
+#header {
+    margin-top: 0;
+    margin-bottom: -50px;
+    padding: 0;
+}
+
+@media screen and (max-width: 898px) {
+    .section {
+        margin-top: 115px;
+    }
+}
+
+.section {
+    margin-top: 150px;
+}
+
+@media screen and (max-width: 898px) {
+    #nav {
+        font-size: 0;
+        width: 320px;
+    }
+}
+
+#nav {
+    margin-top: 20px;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.grid-1.center, .grid-2.center, .grid-3.center, .grid-4.center, .grid-5.center, .grid-6.center, .grid-7.center, .grid-8.center, .grid-9.center, .grid-10.center, .grid-11.center, .grid-12.center, .grid-13.center, .grid-14.center, .grid-15.center, .grid-16.center {
+    float: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Circle images are totally the rage these days
- */
-#selfie {
-    border-radius: 50%;
+.grid-14 {
+    width: 960px;
 }
 
-/* push our text forward a little to give the user's
- * eyes a break
- */
-p {
-    margin-left: 50px;
+@media screen and (max-width: 1016px) {
+    .grid-14 {
+        width: 841px;
+    }
 }
 
-/* Each class movie poster
- * All the content will sit inside these divs
- */
-.poster {
-    margin: 5px 5px;
-    border: medium;
-    width: 300px;
+@media screen and (max-width: 898px) {
+    .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16 {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-/* All the movie posters will sit inside of this
- * class
- */
-.movies {
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16 {
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    max-width: 100%;
+}
+
+.fonts-display {
+    font-family: "freightsans_regular", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+@media screen and (max-width: 898px)
+    #nav p.text-left, #nav p.text-right {
+        text-align: center !important;
+    }
+}
+
+#nav p.alpha {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 898px)
+    #nav p, #nav p.alpha, #nav p.omega {
+        margin: 0;
+    }
+}
+
+.logo {
+    margin-top: -25px;
+    text-indent: -999em;
+}
+
+@media screen and (max-width: 1016px)
+    #nav p.logo {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 898px)
+    #nav p.logo {
+        margin-bottom: 15px;
+        width: 120px;
+    }
+}
+
+html body .mq-wide-i-block {
+    display: inline-block !important;
+    *display: inline !important;
+}
+
+@media screen and (max-width: 1016px) {
+    html body .mq-wide, html body .mq-mid, html body .mq-mobile, html body .mq-wide-i-block, html body .mq-mid-i-block, html body .mq-mobile-i-block {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    html body .mq-wide, html body .mq-small, html body .mq-mobile, html body .mq-wide-i-block, html body .mq-small-i-block, html body .mq-mobile-i-block {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 898px) {
+    html body .mq-wide, html body .mq-mid, html body .mq-small, html body .mq-wide-i-block, html body .mq-mid-i-block, html body .mq-small-i-block {
+        display: none !important;
+    }
+}
+
+html body .mq-mid, html body .mq-small, html body .mq-mobile, html body .mq-mid-i-block, html body .mq-small-i-block, html body .mq-mobile-i-block {
+    display: none !important;
+}
+
+@media screen and (max-width: 1180px) {
+    html body .mq-mid-i-block {
+        display: inline-block !important;
+        *display: inline !important;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+#nav p.omega {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 898px) {
+    hr.center.grid-2 {
+        width: 120px;
+    }
+}
+
+.grid-2 {
+    width: 120px;
+}
+
+@media screen and (max-width: 1016px) {
+    .grid-2 {
+        width: 103px;
+    }
+}
+
+@media screen and (max-width: 898px) {
+    html body .mq-mobile {
+        display: block !important;
+    }
+}
+
+#tagline {
+    font-size: 84px;
+    word-spacing: 1px;
+    line-height: 90px;
+    font-family: "neuzeitgrobold", sans-serif;
+    text-transform: none;
+    letter-spacing: -3px;
+    color: #181818;
     text-align: center;
+    margin: .95em 0 0;
+}
+
+@media screen and (max-width: 898px) {
+    #tagline {
+        font-size: 60px;
+        word-spacing: 1px;
+        line-height: 70px;
+        margin-top: .3em;
+    }
 }
