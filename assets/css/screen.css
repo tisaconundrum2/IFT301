@@ -2129,12 +2129,6 @@ html.touch .custom-checkbox.active, html.touch .custom-checkbox .info {
     z-index: 1;
 }
 
-.marker-image.buffalo {
-    width: 47px;
-    height: 70px;
-    margin: -70px 0 0 -23px;
-}
-
 .marker-image.active {
     opacity: 1 !important;
 }
@@ -2195,81 +2189,6 @@ html.touch .custom-checkbox.active, html.touch .custom-checkbox .info {
     margin-right: 0;
 }
 
-@-moz-keyframes frustrated-buffalo {
-    0% {
-        -moz-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-        -webkit-transform: rotate(-10deg);
-        transform: rotate(-10deg);
-    }
-    100% {
-        -moz-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-}
-
-@-webkit-keyframes frustrated-buffalo {
-    0% {
-        -moz-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-        -webkit-transform: rotate(-10deg);
-        transform: rotate(-10deg);
-    }
-    100% {
-        -moz-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-}
-
-@-o-keyframes frustrated-buffalo {
-    0% {
-        -moz-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-        -webkit-transform: rotate(-10deg);
-        transform: rotate(-10deg);
-    }
-    100% {
-        -moz-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-}
-
-@-ms-keyframes frustrated-buffalo {
-    0% {
-        -moz-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-        -webkit-transform: rotate(-10deg);
-        transform: rotate(-10deg);
-    }
-    100% {
-        -moz-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-}
-
-@keyframes frustrated-buffalo {
-    0% {
-        -moz-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-        -webkit-transform: rotate(-10deg);
-        transform: rotate(-10deg);
-    }
-    100% {
-        -moz-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-}
-
 .logo {
     margin-top: -25px;
     text-indent: -999em;
@@ -2295,11 +2214,6 @@ html.touch .custom-checkbox.active, html.touch .custom-checkbox .info {
     -ms-animation-duration: 0.25s;
     -o-animation-duration: 0.25s;
     animation-duration: 0.25s;
-    -webkit-animation-name: frustrated-buffalo;
-    -moz-animation-name: frustrated-buffalo;
-    -ms-animation-name: frustrated-buffalo;
-    -o-animation-name: frustrated-buffalo;
-    animation-name: frustrated-buffalo;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -ms-animation-iteration-count: infinite;
