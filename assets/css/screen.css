@@ -1,31 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    list-style: none;
-}
-
-aside, header, nav {
-    display: block;
-}
-
-body {
-    text-align: center;
-}
-
-body, button {
-    font-size: 18px;
-    word-spacing: 1px;
-    line-height: 26px;
-    font-family: "freightsans_regular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-weight: 300;
-    text-transform: none;
-    letter-spacing: 0;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
-}
+/*---------------------Style.css---------------------*/
 
 .textelement {
     text-align: left;
@@ -70,6 +43,37 @@ p {
 
 .movies {
     text-align: center;
+}
+
+/*---------------------Style.css---------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+aside, header, nav {
+    display: block;
+}
+
+body {
+    text-align: center;
+}
+
+body, button {
+    font-size: 18px;
+    word-spacing: 1px;
+    line-height: 26px;
+    font-family: "freightsans_regular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
 }
 
 #page-border {
