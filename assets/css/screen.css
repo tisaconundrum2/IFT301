@@ -27,6 +27,51 @@ body, button {
     -webkit-font-smoothing: antialiased;
 }
 
+.textelement {
+    text-align: left;
+}
+
+.group {
+    height: auto;
+    left: 172px;
+    border: medium;
+    margin: 1% 10%;
+    background: rgba(214, 214, 214, 0.6);
+    padding: 10px 50px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#selfie {
+    border-radius: 50%;
+}
+
+p {
+    margin-left: 50px;
+}
+
+.assignment-img {
+    max-width: 100%;
+}
+
+.poster {
+    margin: 5px 5px;
+    border: medium;
+    width: 300px;
+}
+
+.poster-img {
+    height: 450px;
+}
+
+.movies {
+    text-align: center;
+}
+
 #page-border {
     background: #F5F5F5;
     margin: 20px;
