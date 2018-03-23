@@ -209,7 +209,7 @@ hr {
     transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
 }
 
-img {
+.logo-img {
     display: block;
     max-width: 100%;
     height: auto;

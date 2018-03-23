@@ -22,6 +22,10 @@ p {
     width: 300px;
 }
 
+.poster-img {
+    height: 450px;
+}
+
 .movies {
     text-align: center;
 }
