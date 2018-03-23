@@ -1,0 +1,44 @@
+.textelement {
+    text-align: left;
+}
+
+.group {
+    height: auto;
+    left: 172px;
+    border: medium;
+    margin: 1% 10%;
+    background: rgba(221, 221, 221, 0.6);
+    padding: 30px 50px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#selfie {
+    border-radius: 50%;
+}
+
+p {
+    margin-left: 50px;
+}
+
+.assignment-img {
+    max-width: 100%;
+}
+
+.poster {
+    margin: 5px 5px;
+    border: medium;
+    width: 300px;
+}
+
+.poster-img {
+    height: 450px;
+}
+
+.movies {
+    text-align: center;
+}
