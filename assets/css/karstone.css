@@ -1,4 +1,3 @@
-/*! CSS Used from: https://cdn.shopify.com/s/files/1/1598/4825/t/4/assets/theme.scss.css?12194371481271043684 */
 div, h2, .h3, p, a, img, ul, li, figure, time {
     border: 0;
     font-size: 100%;
@@ -102,57 +101,6 @@ li {
     margin-bottom: 0;
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 99;
-    *zoom: 1;
-}
-
-.wrapper:before, .wrapper:after {
-    content: " ";
-    display: table;
-}
-
-.wrapper:after {
-    clear: both;
-}
-
-.wrapper.wrapper--margins {
-    padding: 120px 0 150px;
-}
-
-@media screen and (max-width: 1400px) {
-    .wrapper {
-        margin: 0 100px;
-    }
-
-    .wrapper.wrapper--margins {
-        padding: 120px 0 150px;
-    }
-}
-
-@media screen and (max-width: 1025px) {
-    .wrapper {
-        margin: 0 60px;
-    }
-
-    .wrapper.wrapper--margins {
-        padding: 80px 0 110px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .wrapper {
-        margin: 0 30px;
-    }
-
-    .wrapper.wrapper--margins {
-        padding: 60px 0 50px;
-    }
-}
-
 img {
     border: 0 none;
 }
@@ -166,33 +114,6 @@ img {
     vertical-align: bottom;
 }
 
-@media screen and (max-width: 1025px) {
-    .template-blog .article__img {
-        width: calc(100% + 120px) !important;
-        margin-left: -60px !important;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .template-blog .article__img {
-        width: calc(100% + 60px) !important;
-        margin-left: -30px !important;
-    }
-}
-
-.blog-list {
-    *zoom: 1;
-}
-
-.blog-list:before, .blog-list:after {
-    content: " ";
-    display: table;
-}
-
-.blog-list:after {
-    clear: both;
-}
-
 .article {
     width: 100%;
     border-bottom: 1px solid #dbd8d3;
@@ -202,22 +123,7 @@ img {
     height: 200px;
     padding-right: 70px;
     padding-left: 290px;
-    text-align:  left;
-}
-
-.template-blog .article {
-    min-height: 290px;
-    height: auto;
-}
-
-.template-blog .article {
-    padding-left: 440px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.article:first-child {
-    border-top: 1px solid #dbd8d3;
+    text-align: left;
 }
 
 @media screen and (min-width: 1025px) {
@@ -239,12 +145,6 @@ img {
     background-position: center center;
     width: 220px;
     height: 200px;
-}
-
-.template-blog .article__img {
-    width: 360px;
-    height: 100%;
-    height: calc(100% + 1px);
 }
 
 .article__img img {
@@ -311,68 +211,8 @@ img {
     }
 }
 
-@media screen and (max-width: 1025px) {
-    .template-blog .article {
-        padding: 50px 0 25px 0px !important;
-        height: auto !important;
-        border: none !important;
-    }
-
-    .template-blog .article:first-child {
-        padding-top: 0 !important;
-    }
-
-    .template-blog .article:after {
-        content: "";
-        display: block;
-        background: #dbd8d3;
-        height: 1px;
-        width: 200%;
-        margin-left: -50%;
-        position: relative;
-        top: 30px;
-    }
-
-    .template-blog .article:last-child:after {
-        display: none;
-    }
-
-    .template-blog .article__title {
-        text-align: center;
-        margin-bottom: 35px;
-    }
-
-    .template-blog .article__img {
-        height: auto !important;
-        background-image: none !important;
-        position: relative;
-        margin-bottom: 25px;
-    }
-
-    .template-blog .article__img img {
-        display: block;
-        width: 100%;
-    }
-}
-
-/*! CSS Used from: https://cdn.shopify.com/s/files/1/1598/4825/t/4/assets/style.css?12194371481271043684 */
 a, p, li {
     font-family: Montserrat-Light !important;
-}
-
-@media screen and (max-width: 1025px) {
-    .template-blog .article__img {
-        width: 50% !important;
-        margin-left: 0px !important;
-        margin-top: 50px;
-    }
-}
-
-/*! CSS Used from: https://cdn.shopify.com/s/files/1/1598/4825/t/4/assets/responsive.css?12194371481271043684 */
-@media only screen and (max-width: 767px) {
-    .wrapper.wrapper--margins {
-        padding: 85px 0 50px;
-    }
 }
 
 /*! CSS Used fontfaces */
