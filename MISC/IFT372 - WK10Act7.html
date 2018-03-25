@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+<p><strong>Name(s): </strong>Nicholas Finch</p>
+<p>Activity 8</p>
+<p><strong>Summary (two sentences):</strong></p>
+<p><strong>Key Results:</strong></p>
+<p><strong>Key Conclusions (technical):</strong></p>
+<p><strong>Key Conclusions (critical thinking):</strong></p>
+
+<hr>
+<table border="0" cellpadding="0" cellspacing="0" style="width:340px;" width="340">
+    <colgroup>
+        <col span="5"/>
+    </colgroup>
+    <tbody>
+    <tr height="20">
+        <td height="20" style="height:20px;width:68px;">
+            Position 1
+        </td>
+        <td style="width:68px;">
+            Position 2
+        </td>
+        <td style="width:68px;">
+            Position 3
+        </td>
+        <td style="width:68px;">
+            Position 4
+        </td>
+        <td style="width:68px;">
+            Position 5
+        </td>
+    </tr>
+    <tr height="20">
+        <td align="right" height="20" style="height:20px;">
+            0
+        </td>
+        <td align="right">
+            120
+        </td>
+        <td align="right">
+            215
+        </td>
+        <td align="right">
+            215
+        </td>
+        <td align="right">
+            120
+        </td>
+    </tr>
+    <tr height="20">
+        <td height="20" style="height:20px;">
+            &nbsp;
+        </td>
+        <td align="right">
+            0
+        </td>
+        <td align="right">
+            100
+        </td>
+        <td align="right">
+            160
+        </td>
+        <td align="right">
+            100
+        </td>
+    </tr>
+    <tr height="20">
+        <td height="20" style="height:20px;">
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td align="right">
+            0
+        </td>
+        <td align="right">
+            70
+        </td>
+        <td align="right">
+            100
+        </td>
+    </tr>
+    <tr height="20">
+        <td height="20" style="height:20px;">
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td align="right">
+            0
+        </td>
+        <td align="right">
+            100
+        </td>
+    </tr>
+    <tr height="20">
+        <td height="20" style="height:20px;">
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td align="right">
+            90
+        </td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+<p><strong>Step 1:</strong> Below is the Cisco specifications manual link for an Aeronet Access Point, that includes the
+    minimum receive level for an 802.11n (-75dBm is more received power than -90 dBm), identify the transmit (again
+    using 802.11n output power (here, the greater the positive number, the greater the transmit power), and a list of
+    compatible antennas. Use an antenna gain of 2 dBi (both transmit and receive), with a dipole radiation pattern, and
+    802.11n frequency range (both 2.5 GHz and 5 GHz). Ignore any transmission line loss. Assume that your system uses a
+    Modulation and Coding Scheme #5 (MCS5) and transmits with an HT20 (4 antennas) at max power for 2.4 GHZ and HT40 (4
+    antennas) at max power for 5 GHz.
+    Provide separate results for the 2.4 GHz frequency and the 5 GHz frequency.
+    https://www.cisco.com/c/en/us/products/collateral/wireless/aironet-3600-series/data_sheet_c78-686782.html
+
+<p><strong>Step 2:</strong> Using the presented building layout, the objective is to determine whether or not the link
+    can be closed between two access points (APs)identified in the specification sheet. The diagram shows the possible
+    locations for the WiFi Aps
+
+<p><strong>Step 3:</strong> Using equation 5.4 in your text and assuming isotropic antennas in an obstructed factory
+    (n=3), compute the path loss that will occur between the possible router positions. Add another column to the table
+    above and list the path loss between each of the potential locations.
+<p>
+    \(P_t\) = Signal power at the transmitting antenna<br>
+    \(P_r\) = Signal power at the receiving antenna<br>
+    \(\lambda\) = carrier wavelength <br>
+    \(f\) = carrier frequency<br>
+    \(d\) = propagation distance between antennas<br>
+    \(c\) = speed of light \((3×10^8 m/s)\)
+
+<p>\(L_{dB} = 10 log \frac{P_t}{P_r}\)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(= 10 log ((\frac{4π}{λ})^2d^n)\)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(=−20log(λ)+10nlog(d)+21.98dB\)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(=10log((\frac{4πf}{c})^2d^n)\)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(=20log(f)+10nlog(d)−147.56dB\)<br>
+
+    <br>
+    Given \(n = 3\)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(=20log(2.4\)GHz\()+10(3)log(20)−147.56dB\)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(=379.075\)
+</p>
+<p><strong>Step 4:</strong> Using the stock MIMO antenna (4 antennas) with 2 dBi gain, will all the APs be able to
+    communicate directly? Calculate the receive signal level (RSL) between each of the potential locations. Create
+    another table showing the RSL between each of the stations. Compare the RSL values with the minimum required power
+    levels shown in the data sheet for each of the frequency ranges.
+
+<table border="0" cellpadding="0" cellspacing="0" style="width:340px;" width="340">
+    <colgroup>
+        <col span="5"/>
+    </colgroup>
+    <tbody>
+    <tr height="20">
+        <td height="20" style="height:20px;width:68px;">
+            Position 1
+        </td>
+        <td style="width:68px;">
+            Position 2
+        </td>
+        <td style="width:68px;">
+            Position 3
+        </td>
+        <td style="width:68px;">
+            Position 4
+        </td>
+        <td style="width:68px;">
+            Position 5
+        </td>
+    </tr>
+    <tr height="20">
+        <td align="right" height="20" style="height:20px;">
+            0
+        </td>
+        <td align="right">
+            102.42
+        </td>
+        <td align="right">
+            110.02
+        </td>
+        <td align="right">
+            110.02
+        </td>
+        <td align="right">
+            102.42
+        </td>
+    </tr>
+    <tr height="20">
+        <td height="20" style="height:20px;">
+            &nbsp;
+        </td>
+        <td align="right">
+            0
+        </td>
+        <td align="right">
+            100.04
+        </td>
+        <td align="right">
+            106.17
+        </td>
+        <td align="right">
+            100.04
+        </td>
+    </tr>
+    <tr height="20">
+        <td height="20" style="height:20px;">
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td align="right">
+            0
+        </td>
+        <td align="right">
+            95.34
+        </td>
+        <td align="right">
+            100.04
+        </td>
+    </tr>
+    <tr height="20">
+        <td height="20" style="height:20px;">
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td align="right">
+            0
+        </td>
+        <td align="right">
+            100.04
+        </td>
+    </tr>
+    <tr height="20">
+        <td height="20" style="height:20px;">
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td align="right">
+            98.67
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<p><strong>Step 5:</strong> Compare the RSL values with the minimum required power levels shown in the data sheet.
+    Create another table indicting whether the two APs will be able to communicate.If the links cannot be closed between
+    two locations, identify which locations cannot communicate directly. Does it make a difference whether you are
+    communicating at 2.4 GHz or 5 GHz? Explain.
+
+<p><strong>Step 6:</strong> How much antenna gain is required to close the link between the router positions that
+    currently cannot communicate. Is this a practical antenna?
+
+<p><strong>Step 7/conclusion:</strong> Complete a practical discussion on the amount of overhead/headroom that should be
+    left when designing real wireless systems. This should be an analysis that includes critical thinking about real
+    world problems with simple models.
+     
+
+
+</body>
+</html>

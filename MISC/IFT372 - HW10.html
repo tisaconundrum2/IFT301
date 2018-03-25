@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>HW Assignment 10</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>
+    <center>IFT-372
+        <br>Homework Assignment 10
+    </center>
+</h1>
+<center>
+    Nicholas Finch
+</center>
+
+<p>Reading
+    <br>Read 13 in your text
+    <br>Review the slide presentation
+
+<p>Questions (p. 448):
+
+<p>13.3 List five ways of increasing the capacity of a cellular system.
+    <div class="answer">
+<p> 1. Adding new channels</p>
+<p> 2. Frequency borrowing</p>
+<p> 3. Cell splitting</p>
+<p> 4. Cell sectoring</p>
+<p> 5. Microcells</p>
+</div>
+
+<p>13.4 Explain the paging function of a cellular system.
+    <div class="answer">
+<p>The Mobile Identification Number (MIN) is then broadcast over all the forward control channels throughout the
+    cellular system. It is known as paging. </p>
+<p>To complete a call to a mobile unit, the base stations in a number of cells will send out a page signal in an attempt
+    to find the mobile unit and make the connection.</p></div>
+
+<p>13.10 What are the advantages of using CDMA for a cellular network?
+    <div class="answer">
+<p><b>Frequency diversity: </b>with frequency diversity, the signal is spread out over a larger frequency bandwidth,
+    frequency-dependent transmission impairments, such as noise bursts and selective fading, have less effect on the
+    signal. </p>
+<p><b>Multipath resistance: </b>The chipping codes used for CDMA not only exhibit low cross-correlation but also low
+    auto correlation. Therefore, a version of the signal that is delayed by more than one chip interval does not
+    interfere with the dominant signal as much as in other multipath environments.</p>
+<p><b>Privacy: </b>Because spread spectrum is obtained by the use of noise-like signals, where each user has a unique
+    code, privacy is inherent.</p>
+<p><b>Graceful degradation: </b>With FDMA or TDMA, a fixed number of users can simultaneously access the system.
+    However, with CDMA, as more users simultaneously access the system, the noise level and hence the error rate
+    increases; only gradually does the system degrade to the point of an unacceptable error rate</p></div>
+
+<p>13.11 What are the disadvantages of using CDMA for a cellular network?
+    <div class="answer">
+<p><b>Self-jamming: </b> Unless all of the mobile users are perfectly synchronized, the arriving transmissions from
+    multiple users will not be perfectly aligned on chip boundaries. Thus the spreading sequences of the different users
+    are not orthogonal and
+    there is some level of cross-correlation. This is distinct from either TDMA or FDMA, in which for reasonable time or
+    frequency guard bands, respectively, the received signals are orthogonal or nearly so. </p>
+<p><b>Near-far problem:</b> Signals closer to the receiver are received with less attenuation than signals farther away.
+    Given the lack of
+    complete orthogonality, the transmissions from the more remote mobile units may be more difficult to recover. Thus,
+    power control techniques are very important in a CDMA system.</p>
+<p><b>Soft handoff: </b>A smooth handoff from one cell to the next requires that the mobile acquires the new cell before
+    it relinquishes the old. This is referred to as a soft handoff, and is more complex than the hard handoff used in
+    FDMA and TDMA schemes.</p></div>
+
+
+<p>Problems (p. 449)
+<p>13.1 Consider four different cellular systems that share the following characteristics. The frequency bands are 825
+    to 845 MHz for mobile unit transmission and 870 to 890 MHz for base station transmission. A duplex circuit consists
+    of one 30-kHz channel in each direction. The systems are distinguished by the reuse factor, which is 4, 7, 12, and
+    19, respectively.
+    <ol type="a">
+        <li>Suppose that in each of the systems, the cluster of cells (4, 7, 12, 19) is duplicated 16 times. Find the
+            number
+            of simultaneous communications that can be supported by each system.
+        </li>
+        <div class="answer">
+<p> Let the number of clusters M = 16</p>
+<p> Bandwidth assigned to the cluster
+<p>\(B_{CL} = (845 - 825) + (890 - 870)\)</p>
+<p>\( = 20 + 20\)</p>
+<p>\( = 40MHz\)</p>
+<p>Required bandwidth for each one-way direction of channel \(= 30 kHz\)</p>
+<p> Required bandwidth for each two-way direction of channel
+<p>\(b_{ch} = 2 * 30\)</p>
+<p>\( = 60 kHz\)</p>
+<p> Total number of simultaneous calls supported by the system
+<p>\(k_{SYS} = \frac {MB_{CL}}{b_{ch}}\)</p>
+<p>\(k_{SYS} = \frac {16 * 40}{60}\)</p>
+<p>\( = 10.6666 channels\)</p> </div>
+
+<li>Find the number of simultaneous communications that can be supported by a single cell in each system.</li>
+<div class="answer">
+    <p>If frequency reuses factor N and available channels
+    <p>\((K) = \frac{B_{CL}}{b_{ch}}\)
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\( = \frac{40 * 10^6}{60 * 10^3} \)
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 666 </p>
+    <p>The number of channels in each cell \(K_{CE} = \frac{K}{N}\) Channels</p>
+    <p>For N = 4, </p>
+    <p>\(K_{CE} = \frac{K}{N}\)
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 666/4</p>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 166 channels</p>
+    <p>For N = 7, </p>
+    <p>\(K_{CE} = \frac{K}{N}\)
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 666/7</p>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 95 channels</p>
+    <p>For N = 12, </p>
+    <p>\(K_{CE} = \frac{K}{N}\)
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 666/12</p>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 55 channels</p>
+    <p>For N = 19, </p>
+    <p>\(K_{CE} = \frac{K}{N}\)
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 666/19</p>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 35 channels</p></div>
+
+
+<li>What is the area covered, in cells, by each system?</li>
+<div class="answer">
+    <pre><code>
+    For N = 4,
+        Area = 16 * 4
+             = 64 cells;
+    For N = 7,
+        Area = 16*7
+             =112 cells;
+    For N = 12,
+        Area = 16 * 12
+             = 192 cells;
+    For N = 19,
+        Area = 16 * 19
+             = 304 cells;</p></code>
+</pre>
+</div>
+<li>Suppose the cell size is the same in all four systems and a fixed area of 100 cells is covered by each system.
+    Find the number of simultaneous communications that can be supported by each system.
+</li>
+<div class="answer">
+    <p> The number of channels that can be carried per cell for each system. The total number of channels available is
+        just 100 times that number, for a result of 16600, 9500, 5500, and 3500, respectively.</p>
+    <p></p></div>
+</ol>
+<p>13.4 In the discussion of the handoff procedure based on relative signal strength with threshold, it was pointed out
+    that if the threshold is set quite low, such as \(Th_3\), the mobile unit may move far into the new cell \((L_4)\).
+    This
+    reduces the quality of the communication link and may result in a dropped call. Can you suggest another
+    drawback of this scheme?
+<p>13.12 Consider a ­seven-​­cell system covering an area of \(3100 km^2\). The traffic in the seven cells is as
+    follows:
+    <table class="informaltable largetable" data-uri="M17_BEAR4171_01_SE_C13.xhtml#P70004956370000000000000000038D2"
+           id="P70004956370000000000000000038D2"
+           style="margin: 0px 0px 1.5em; padding: 0px; border-top: 2px solid rgb(70, 129, 115); border-bottom: 2px solid rgb(70, 129, 115); border-right-style: solid; border-left-style: solid; border-right-color: rgb(70, 129, 115); border-left-color: rgb(70, 129, 115); font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 16px; line-height: 1.67647em; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; vertical-align: baseline; border-collapse: collapse; border-spacing: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border-radius: 0px; width: 597.6px; break-inside: avoid; color: rgb(51, 51, 51); transform-origin: 0px 0px 0px;">
+        <thead style="margin: 0px; padding: 0px; border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: rgb(70, 129, 115); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+        <tr style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+            <th data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D72C"
+                id="P700049563700000000000000000D72C"
+                style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: rgba(70, 129, 115, 0.15); border-radius: 0px; text-align: left; color: rgb(70, 129, 115);">
+<p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D72D" id="P700049563700000000000000000D72D"
+   style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+    Cell number</p>
+</th>
+<th data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D72E" id="P700049563700000000000000000D72E"
+    style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: rgba(70, 129, 115, 0.15); border-radius: 0px; text-align: left; color: rgb(70, 129, 115);">
+    <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D72F" id="P700049563700000000000000000D72F"
+       style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+        1</p>
+</th>
+<th data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D730" id="P700049563700000000000000000D730"
+    style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: rgba(70, 129, 115, 0.15); border-radius: 0px; text-align: left; color: rgb(70, 129, 115);">
+    <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D731" id="P700049563700000000000000000D731"
+       style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+        2</p>
+</th>
+<th data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D732" id="P700049563700000000000000000D732"
+    style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: rgba(70, 129, 115, 0.15); border-radius: 0px; text-align: left; color: rgb(70, 129, 115);">
+    <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D733" id="P700049563700000000000000000D733"
+       style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+        3</p>
+</th>
+<th data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D734" id="P700049563700000000000000000D734"
+    style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: rgba(70, 129, 115, 0.15); border-radius: 0px; text-align: left; color: rgb(70, 129, 115);">
+    <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D735" id="P700049563700000000000000000D735"
+       style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+        4</p>
+</th>
+<th data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D736" id="P700049563700000000000000000D736"
+    style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: rgba(70, 129, 115, 0.15); border-radius: 0px; text-align: left; color: rgb(70, 129, 115);">
+    <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D737" id="P700049563700000000000000000D737"
+       style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+        5</p>
+</th>
+<th data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D738" id="P700049563700000000000000000D738"
+    style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: rgba(70, 129, 115, 0.15); border-radius: 0px; text-align: left; color: rgb(70, 129, 115);">
+    <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D739" id="P700049563700000000000000000D739"
+       style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+        6</p>
+</th>
+<th data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D73A" id="P700049563700000000000000000D73A"
+    style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: rgba(70, 129, 115, 0.15); border-radius: 0px; text-align: left; color: rgb(70, 129, 115);">
+    <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D73B" id="P700049563700000000000000000D73B"
+       style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+        7</p>
+</th>
+</tr>
+</thead>
+<tbody style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+<tr style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+    <td data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D73C" id="P700049563700000000000000000D73C"
+        style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: transparent; border-radius: 0px;">
+        <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D73D"
+           id="P700049563700000000000000000D73D"
+           style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+            Traffic (Erlangs)</p>
+    </td>
+    <td data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D73E" id="P700049563700000000000000000D73E"
+        style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: transparent; border-radius: 0px;">
+        <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D73F"
+           id="P700049563700000000000000000D73F"
+           style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+            30.8</p>
+    </td>
+    <td data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D740" id="P700049563700000000000000000D740"
+        style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: transparent; border-radius: 0px;">
+        <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D741"
+           id="P700049563700000000000000000D741"
+           style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+            66.7</p>
+    </td>
+    <td data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D742" id="P700049563700000000000000000D742"
+        style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: transparent; border-radius: 0px;">
+        <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D743"
+           id="P700049563700000000000000000D743"
+           style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+            48.6</p>
+    </td>
+    <td data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D744" id="P700049563700000000000000000D744"
+        style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: transparent; border-radius: 0px;">
+        <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D745"
+           id="P700049563700000000000000000D745"
+           style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+            33.2</p>
+    </td>
+    <td data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D746" id="P700049563700000000000000000D746"
+        style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: transparent; border-radius: 0px;">
+        <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D747"
+           id="P700049563700000000000000000D747"
+           style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+            38.2</p>
+    </td>
+    <td data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D748" id="P700049563700000000000000000D748"
+        style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: transparent; border-radius: 0px;">
+        <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D749"
+           id="P700049563700000000000000000D749"
+           style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+            37.8</p>
+    </td>
+    <td data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D74A" id="P700049563700000000000000000D74A"
+        style="margin: 0px; padding: 0.5625em; border-style: solid; border-color: rgb(70, 129, 115); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: top; background: transparent; border-radius: 0px;">
+        <p data-uri="M17_BEAR4171_01_SE_C13.xhtml#P700049563700000000000000000D74B"
+           id="P700049563700000000000000000D74B"
+           style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+            32.6</p>
+    </td>
+</tr>
+</tbody>
+</table>
+
+<p>Each user generates an average of 0.03 Erlangs of traffic per hour, with a mean holding time of 120 s. The
+    system consists of a total of 395 channels and is designed for a grade of service of 0.02.
+
+<ol type="a">
+    </li>
+    <li>Determine the number of subscribers in each cell.</li>
+    <li>Determine the number of calls per hour per subscriber.</li>
+    <li>Determine the number of calls per hour in each cell.</li>
+    <li>Determine the number of channels required in each cell. Hint: you will need to extrapolate using Table 13.1.
+    </li>
+    <li>Determine the total number of subscribers.</li>
+    <li>Determine the average number of subscribers per channel.</li>
+    <li>Determine the subscriber density per \(km^2\).</li>
+    <li>Determine the total traffic (total Erlangs).</li>
+    <li>Determine the Erlangs per \(km^2\).</li>
+    <li>What is the radius of a cell?</li>
+</ol>
+
+<hr>
+
+<p><strong>Additional Problems</strong>
+
+<p>1. Which register is always queried first for any incoming call? Why?
+<p>2. What are the three validation characteristics that must exist before one can make a cellular phone call.
+<p>3. Identify FCC involvement in Cellular Operating Systems. Explain what aspects are regulated and which aspects can
+    be determined by operator.
+<p>4. Explain what happens to capacity as cluster size is reduced in a cell of a fixed size.
+<p>5. Explain the difference between a hard hand-off and a soft hand-off.
+<p>6. Briefly describe the hard hand-off process.
+<p>7. Briefly describe the main architectural components of a cellular radio system. Identify the primary purpose of
+    each. Identify the two major components and their respective subsystems. Ensure you identify which component
+    interacts with cellular phone and which component interacts with public switched telephone network.
+<p>8. Explain the purpose of a SIM card.
+<p>9. Briefly describe the registration process for a GSM cellular phone.
+<p>10. What is the difference between a control channel and a traffic channel in a cellular radio system?
+<p>11. What are the major IMEI categories? Identify the purpose of each.
+<p>12. How are the MSISDN and the MSRN different? How are they similar?
+<p>13. How does a cellular phone identify its current location within an area?
+<p>14. How are the IMSI and the TMSI different? How are they similar?
+<p>15. What is the purpose of the BSIC?
+<p>16. How are the VLR and HLR different? How are the two similar?
+<p>17. Explain the registration process. What causes this process to be initiated?
+
+</body>
+</html>
