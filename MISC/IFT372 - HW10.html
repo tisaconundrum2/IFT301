@@ -8,7 +8,7 @@
     </script>
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<e th>
 <h1>
     <center>IFT-372
         <br>Homework Assignment 10
@@ -26,11 +26,11 @@
 
 <p>13.3 List five ways of increasing the capacity of a cellular system.
     <div class="answer">
-<p> 1. Adding new channels</p>
-<p> 2. Frequency borrowing</p>
-<p> 3. Cell splitting</p>
-<p> 4. Cell sectoring</p>
-<p> 5. Microcells</p>
+<p>1. Adding new channels<br>
+2. Frequency borrowing<br>
+3. Cell splitting<br>
+4. Cell sectoring<br>
+5. Microcells
 </div>
 
 <p>13.4 Explain the paging function of a cellular system.
@@ -144,12 +144,14 @@
     <p> The number of channels that can be carried per cell for each system. The total number of channels available is
         just 100 times that number, for a result of 16600, 9500, 5500, and 3500, respectively.</p>
     <p></p></div>
-</ol>
 <p>13.4 In the discussion of the handoff procedure based on relative signal strength with threshold, it was pointed out
     that if the threshold is set quite low, such as \(Th_3\), the mobile unit may move far into the new cell \((L_4)\).
     This
     reduces the quality of the communication link and may result in a dropped call. Can you suggest another
     drawback of this scheme?
+    <div class="answer">
+
+    </div>
 <p>13.12 Consider a ­seven-​­cell system covering an area of \(3100 km^2\). The traffic in the seven cells is as
     follows:
     <table class="informaltable largetable" data-uri="M17_BEAR4171_01_SE_C13.xhtml#P70004956370000000000000000038D2"
@@ -276,16 +278,46 @@
 <ol type="a">
     </li>
     <li>Determine the number of subscribers in each cell.</li>
+    <div class="answer">
+
+    </div>
     <li>Determine the number of calls per hour per subscriber.</li>
+    <div class="answer">
+
+    </div>
     <li>Determine the number of calls per hour in each cell.</li>
+    <div class="answer">
+
+    </div>
     <li>Determine the number of channels required in each cell. Hint: you will need to extrapolate using Table 13.1.
     </li>
+    <div class="answer">
+
+    </div>
     <li>Determine the total number of subscribers.</li>
+    <div class="answer">
+
+    </div>
     <li>Determine the average number of subscribers per channel.</li>
+    <div class="answer">
+
+    </div>
     <li>Determine the subscriber density per \(km^2\).</li>
+    <div class="answer">
+
+    </div>
     <li>Determine the total traffic (total Erlangs).</li>
+    <div class="answer">
+
+    </div>
     <li>Determine the Erlangs per \(km^2\).</li>
+    <div class="answer">
+
+    </div>
     <li>What is the radius of a cell?</li>
+    <div class="answer">
+
+    </div>
 </ol>
 
 <hr>
@@ -293,25 +325,128 @@
 <p><strong>Additional Problems</strong>
 
 <p>1. Which register is always queried first for any incoming call? Why?
+    <div class="answer">
+    <p>HLR is always first queried to determine the user’s current location.</p></div>
 <p>2. What are the three validation characteristics that must exist before one can make a cellular phone call.
+    <div class="answer">
+        <ul>
+            <li>Valid IMEI</li>
+            <li>Valid IMSI</li>
+            <li>Valid SIM card</li>
+        </ul>
+    </div>
 <p>3. Identify FCC involvement in Cellular Operating Systems. Explain what aspects are regulated and which aspects can
     be determined by operator.
+    <div class="answer">
+        The FCC issues cellular licenses by dividing the U.S. into 734 geographic Cellular Market Areas and by dividing
+        50MHz of spectrum into 2, 25MHz channel blocks, A & B. FCC regulate where cellular data can be used and which
+        frequency the operator is allowed to access. Operators regulate prices, data sizes and plans.
+    </div>
 <p>4. Explain what happens to capacity as cluster size is reduced in a cell of a fixed size.
+    <div class="answer">
+        When cluster size is reduce in a cell of a fixed size the capacity increase.
+    </div>
 <p>5. Explain the difference between a hard hand-off and a soft hand-off.
+    <div class="answer">
+        In hard handoff the mobile station switches to a new frequency band that is
+        within the allocation of the new cell while in soft handoff the mobile station is temporarily connected to more
+        than one base station simultaneously.
+
+    </div>
 <p>6. Briefly describe the hard hand-off process.
-<p>7. Briefly describe the main architectural components of a cellular radio system. Identify the primary purpose of
+    <div class="answer">
+        hard handoff the mobile station switches to a new frequency band that is within the allocation of the new cell
+    </div>
+
+    <p>7. Briefly describe the main architectural components of a cellular radio system. Identify the primary purpose of
     each. Identify the two major components and their respective subsystems. Ensure you identify which component
     interacts with cellular phone and which component interacts with public switched telephone network.
+    <div class="answer">
+        <ul>
+            <li>Base Station subsystem</li>
+            <ul>
+                <li>Base Transceiver station – provides radio channels for signaling and use data traffic in a cell</li>
+            </ul>
+            <ul>
+                <ul>
+                    <li>Interacts with the mobile station</li>
+                </ul>
+            </ul>
+            <ul>
+                <li>Base station controller – supports and controls one or more BTS</li>
+            </ul>
+            <ul>
+                <ul>
+                    <li>Interacts with the mobile switching center</li>
+                </ul>
+            </ul>
+            <li>Mobile Switching Management and Subsystem</li>
+            <ul>
+                <li>Mobile Switching Centers – performs all switching functions of a fixed-network switching node</li>
+            </ul>
+            <ul>
+                <ul>
+                    <li>Pass traffic between fixed networks and mobile networks</li>
+                </ul>
+            </ul>
+            <ul>
+                <li>Databases – stores the data required for routing and service provisioning</li>
+            </ul>
+        </ul>
+    </div>
 <p>8. Explain the purpose of a SIM card.
+    <div class="answer">
+        SIM cards are used for user identification associated with a mobile station. They also provide the ability to
+        distinguish between equipment mobility and subscriber mobility.
+    </div>
 <p>9. Briefly describe the registration process for a GSM cellular phone.
+    <div class="answer">
+        MS sends a request to the BSS. The BSS gathers information about the MS and forwards it to the MSC/VLR. The VLR
+        checks to see if the MS is registered in the database. If not then the VLR gets a copy of the subscription
+        information from the HLR. HLR validates the MS’s IMSI. If valid then the VLR stores it in its database and sends
+        an acknowledgement to the MS.
+    </div>
 <p>10. What is the difference between a control channel and a traffic channel in a cellular radio system?
+    <div class="answer">
+        Control channels are used to exchange information having to do with setting up and maintaining calls and with
+        establishing a relationship between a mobile unit and the nearest BS. Traffic channels carry a voice or data
+        connection between users.
+    </div>
 <p>11. What are the major IMEI categories? Identify the purpose of each.
+    <div class="answer">
+        White List – register of all equipment<br>
+        Black List – register of all suspended equipment<br>
+        Gray List – register of malfunctioning or obsolete equipment
+    </div>
 <p>12. How are the MSISDN and the MSRN different? How are they similar?
+    <div class="answer">
+        MSISDN is the actual telephone number of a mobile unit and the MSRN has the same structure as a MSISDN but is a
+        temporary location-dependent ISDN number.
+    </div>
 <p>13. How does a cellular phone identify its current location within an area?
+    <div class="answer">
+        A cellular phone uses the HLR to identify its current location with an area. The HLR contains a link to the
+        current location of the MS.
+    </div>
 <p>14. How are the IMSI and the TMSI different? How are they similar?
+    <div class="answer">
+        The IMSI is stored in the SIM and used to uniquely identify a subscriber and the TMSI is used in place of the
+        IMSI for the definite identification and addressing of the MS.
+    </div>
 <p>15. What is the purpose of the BSIC?
+    <div class="answer">
+        The BSIC is used to distinguish neighboring base stations.
+    </div>
 <p>16. How are the VLR and HLR different? How are the two similar?
+    <div class="answer">
+        The HLR has data for every subscriber and every mobile ISDN number in the respective network and the VLR stores
+        the data of all MSs which are currently staying in the administrative area of the associated MSC.
+    </div>
 <p>17. Explain the registration process. What causes this process to be initiated?
+    <div class="answer">
+        A MS starts a registration procedure when it enters a LA. The registration process identifies, validates, and
+        updates the location of a MS.
+    </div>
 
 </body>
 </html>
