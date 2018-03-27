@@ -2,7 +2,24 @@
  * Created by tisaconundrum on 3/22/2018.
  */
 function setHeader() {
-    var link = document.querySelector('link[rel="import"]');
-    var template = link.import.querySelector('template');
-    document.querySelector('#wrap').appendChild(template.content);
+    document.getElementById("header").innerHTML =
+        '<header id="header" class="clearfix section">\
+        <nav id="nav" class="center grid-14">\
+            <div class="fonts-display clearfix">\
+                <p class="logo mq-wide-i-block mq-mid-i-block mq-small-i-block">\
+                    <a href="index.html">\
+                        <img class="logo-img" src="assets/img/logo-type.png" alt="Built By">\
+                        <img class="logo-img" src="assets/img/logo-plain.png">\
+                    </a>\
+                </p>\
+                <p class="text-left alpha"><a href="index.html">Home</a></p>\
+                <p class="text-left"><a href="#">Work</a></p>\
+                <p class="text-left"><a href="AboutMe.html">About</a></p>\
+                <p class="text-left"><a href="Feed.html">Feed</a></p>\
+                <p class="text-left"><a href="mailto: ngfinch@asu.edu">Contact</a></p>\
+            </div>\
+            <hr class="grid-2 center mq-mobile">\
+        </nav>\
+    </header>';
+
 }
