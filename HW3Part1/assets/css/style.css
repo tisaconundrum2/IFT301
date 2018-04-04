@@ -1,5 +1,8 @@
 table, th, td {
     border-collapse: collapse;
+}
+
+th, td {
     padding: 5px;
 }
 
@@ -26,4 +29,9 @@ table, th, td {
 
 .red, th, td{
     border: 1px solid #993738;
+}
+
+
+.black {
+    border: 1px solid black;
 }
