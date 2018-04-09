@@ -3,8 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
+<!--The body will contain background image-->
 <body>
 
+<!--Top div with image-->
+<div class="top">
+    <img src="assets/img/habitat_logo.png" height="58" width="160"/>
+</div>
+
+<div class="content">
+    <!--Left Nav bar-->
+    <div class="nav_bar">
+        <ul>
+
+
+
+
+            <a href="http://www.habitat.org/about">
+                <li>Learn More</li>
+            </a>
+            <a href="http://www.habitat.org/volunteer">
+                <li>Volunteer</li>
+            </a>
+            <a href="http://www.habitat.org/about/advocacy">
+                <li>Advocate</li>
+            </a>
+            <a href="https://www.habitat.org/donate/">
+                <li>Donate</li>
+            </a>
+        </ul>
+    </div>
+    <!--Registration form-->
+    <div class="registration_form">
+        <h1>Registration Form</h1>
+        <p>Habitat for Humanity needs volunteers. Do you want to help? Complete the registration form and join our
+            worldwide fight against substandard housing.</p>
+        <form id="personalInfo">
+            <fieldset>
+                <legend>Personal Information</legend>
+                Title: <input type="text" name="title" value=""><br>
+                First Name: <input type="text" name="fname" value=""><br>
+                Last Name: <input type="text" name="lname" value=""><br>
+                Date of Birth: <input type="text" name="dob" value=""><br>
+                Best Home Building Skill:<br>
+                <textarea rows="3" cols="30">enter notes here...</textarea>
+            </fieldset>
+        </form>
+        <p><form>
+            <fieldset>
+                <legend>Experience:</legend>
+                Years of Home Building Experience: 0 <input type="range" min="1" max="100" value="50" class="slider"
+                                                            id="myRange"> 10+
+                <p>Number of Habitat Home Built: <input type="number" min="0" max="100"></p>
+                <p><input type="button" value="Submit Form"> <input type="button" value="Submit For to a New Window"></p>
+            </fieldset>
+        </form>
+        </p>
+    </div>
+</div>
 </body>
 </html>
