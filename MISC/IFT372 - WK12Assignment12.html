@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+To determine the data rate for 16 QAM using a \(\frac23\) coding rate with 2 parallel data stream
+<p>
+    a) Assume that there are 64 subcarriers to find the symbol rate on each sub-channel. Therefore
+    <br><br>subcarrier symbol\(= 16 QAM\)
+    <br>coding rate \(= \frac23\)
+    <br>\(\)
+    <br>\(\)
+
+    $$T_N = \frac{64}{20*10^6}$$
+    $$T_N = 3.2 µs$$
+    The number of coded bits for subcarrier symbol for 16 QAM is
+    $$log_216 = log_22^4 = 4$$
+
+    Note that there are a total of 48 subcarriers used for data transmission.
+<p>Therefore, the data rate is
+    $$R = 4*48*\frac23*\frac{1}{3.2*10^{-6}}$$
+    $$R = 40 Mbps$$
+
+<p>b) Data rate for 50 MHz channel
+    $$T_N = \frac{64}{40*10^6}$$
+    $$T_N = 1.6 µs$$
+    $$R = 4*48*\frac23*\frac{1}{1.6*10^{-6}}$$
+    $$R = 80 Mbps$$
+
+</body>
+</html>
