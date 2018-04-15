@@ -1,18 +1,12 @@
+.small {
+    height: 250px;
+}
+
 .large {
     height: 500px;
 }
 .grey {
     background-color: #dbd8d3;
-}
-
-.picture0 {
-    background: url("../../assets/img/python.jpg") no-repeat;
-    background-size: cover;
-}
-
-.picture1 {
-    background: url("../../assets/img/computer-programmer.jpg") no-repeat;
-    background-size: cover;
 }
 
 .content {
@@ -22,6 +16,17 @@
     margin-right: 10%;
 }
 
+.small .content{
+    padding-top: 5%;
+    margin-bottom: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 .row {
     margin: 0 0;
+}
+
+.jumbotron {
+    margin-bottom: 0;
 }
