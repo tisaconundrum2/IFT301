@@ -6,13 +6,13 @@
 }
 
 .picture0 {
-    background-size: cover;
     background: url("../../assets/img/python.jpg") no-repeat;
+    background-size: cover;
 }
 
 .picture1 {
-    background-size: cover;
     background: url("../../assets/img/computer-programmer.jpg") no-repeat;
+    background-size: cover;
 }
 
 .content {
