@@ -1,0 +1,29 @@
+.large {
+    height: 500px;
+}
+.grey {
+    background-color: #dbd8d3;
+}
+
+.picture0 {
+    background-image: url("assets/img/python.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.picture1 {
+    background-image: url("assets/img/computer-programmer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content {
+    padding-top: 20%;
+    margin-bottom: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.row {
+    margin: 0 0;
+}
