@@ -2,6 +2,17 @@
     height: 250px;
 }
 
+.smaller {
+    height: 100px;
+}
+
+.smaller .content {
+    padding-top: 5%;
+    margin-bottom: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 .large {
     height: 500px;
 }
@@ -29,4 +40,10 @@
 
 .jumbotron {
     margin-bottom: 0;
+}
+
+#tryPythonIframe{
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
