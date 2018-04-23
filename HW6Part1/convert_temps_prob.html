@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <title>Convert from Fahrenheit to Centigrade</title>
     <script>
-
-        var Fah = prompt("Enter Fahrenheit temperature");
-        var Cel = (Fah - 32) * 5/9;
-        alert("Fahrenheit temperature is " + Fah + "\n\nCelsius temperature is " + Cel);
+        // Add data validation to the application so it won’t do the conversion until the user enters a Fahrenheit temperature between -100 and 212. If the entry is invalid, a dialog box like the one above should be displayed.
+        // Add a loop to the code so the user can do a series of calculations without restarting the application. To end the application, the user must enter 999 as the temperature.
+        while (true) {
+            var Fah = prompt("Enter Fahrenheit temperature");
+            if (Fah == 999){
+                break;
+            }
+            else if (-100 < Fah && Fah > 212) {
+                alert("You entered " + Fah + "\nEntry must range from -100 to +212");
+            }
+            else {
+                var Cel = (Fah - 32) * 5 / 9;
+                alert("Fahrenheit temperature is " + Fah + "\n\nCelsius temperature is " + Cel);
+            }
+        }
     </script>
 </head>
 <body>
