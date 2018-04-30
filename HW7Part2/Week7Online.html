@@ -126,19 +126,32 @@
 
 <!-- onkeypress="window.alert('Welcome ' + document.welcomeform.yourname.value);" -->
 
+<script tabindex="text/javascript">
+    function getNetPay (){
+        var GROSSPAY = document.netpayForm.grossPay.value;
+        var TAXES = document.netpayForm.taxes.value;
+        var DEDUCTIONS = document.netpayForm.deductions.value;
+
+        var tax = GROSSPAY/TAXES
+        var afterTax = GROSSPAY-tax
+
+        var netPay = (afterTax + parseInt(DEDUCTIONS))
+        return netPay
+    }
+</script>
 
 <p><a href="javascript: myfunction();">Launch to begin with javascript coding</a></p>
 
 <div id="clock" style="font-size:36px;border:3px groove maroon;text-shadow:2px 2px 2px maroon;
 width:200px; height:50px"></div>
-<BR/ >
+<br>
 
 <form name="welcomeform" action="">
     Enter your name: <input type="text" name="yourname"/>
     <input type="button" value="Let's get started"
            onClick="window.alert('Welcome ' + document.welcomeform.yourname.value);"/>
 </form>
-<BR/>
+<br>
 <hr/>
 <p style="color:maroon;"> Use this Week7Online.html file as the source. Only for question (1) specified below, the code
     needs to be written.
@@ -146,7 +159,7 @@ width:200px; height:50px"></div>
     submit it as one file). </p>
 <p> Quesstion (1): Write a javascript function to find NETPAY and display it on your browser to show the result.(Max. 25
     POINTS) </p>
-Details: <BR/>
+Details: <br>
 <ul>
     <li> GROSSPAY is your (employee's) wages BEFORE any deductions that include TAXES and DEDUCTIONS withheld</li>
     <li> The variables are the ones shown in caps above. Calcuate the Netpay using the 3 variables.</li>
@@ -154,12 +167,27 @@ Details: <BR/>
         a form to do that.
     </li>
 </ul>
+
+<!--Adding my solution-->
+<form name="netpayForm" action=""><br>
+    Please enter the employee's gross pay:
+    <input type="number" name="grossPay"><br>
+
+    Please enter the employee's tax rate as a percentage:
+    <input type="number" name="taxes" size="2" max="100" min="0"><br>
+
+    Please enter the total amount of deductions:
+    <input type="number" name="deductions"><br>
+
+    <input type="button" value="Calculate" onclick="window.alert('The Net Pay is: ' + getNetPay());">
+</form>
+
 <hr/>
 
 <p style="color:maroon;"> For question (2) below, just add the necessary CSS properties to the digital clock to position
     the clock to the top right corner in the #clock attribute that is already provided in the code. </p>
 <p> Question (2): Javascript code is written for this part. However, you have to do the following. (Max. 10 POINTS) </p>
-Details: <BR/>
+Details: <br>
 <ul>
     <li> Display the clock in our sundevil colors with gold background color and maroon text color. Use only HEX or RBG
         color codes.
@@ -174,7 +202,7 @@ Details: <BR/>
     PROJECT WEBSITE TOPIC, using some of the Image object methods and properties
     - You may refer to Chapter 3 Javascript PPT shared under Week 7 resources.(Max. 15 POINTS) </p>
 
-Details: <BR/>
+Details: <br>
 <ul>
     <li> A simple image gallery</li>
     <li> The &lt;&lt; link moves you one back in the gallery</li>
