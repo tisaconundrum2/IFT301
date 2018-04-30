@@ -34,39 +34,149 @@
 </nav>
 <div class="container" style="padding-top: 50px">
     <div class="col-md-12 grey">
-            <div class="content">
-                <h3>Your First Program</h3>
+        <div class="content">
+            <h3>Booleans</h3>
 
-                <p>Let's start off by creating a short program that displays "Hello world!".
-                In Python, we use the print statement to output text:
+            <p>Another type in Python is the Boolean type. There are two Boolean values: True and False.
+                They can be created by comparing values, for instance by using the equal operator ==.</p>
+            <pre><code>
+            >>> my_boolean = True
+            >>> my_boolean
+            True
 
-                <pre><code>
-                >>> print('Hello world!')
-                Hello world!
-                </code></pre>
-
-                <p>Try it below
-
-                </p>
-            </div>
+            >>> 2 == 3
+            False
+            >>> "hello" == "hello"
+            True
+            </code></pre>
         </div>
+    </div>
 
     <div class="col-md-12 ">
-            <div class="content">
-                <h3>Printing Text</h3>
+        <div class="content">
+            <h3>if Statements</h3>
 
-                <p>The print statement can also be used to output multiple lines of text.
-                    For Example:</p>
-                <pre><code>
-                >>> print('Hello world!')
-                Hello world!
-                >>> print('Hello world!')
-                Hello world!
-                >>> print('Spam and eggs...')
-                Spam and eggs...
-                </code></pre>
-            </div>
+            <p>You can use if statements to run code if a certain condition holds.
+                If an expression evaluates to True, some statements are carried out. Otherwise, they aren't carried out.</p>
+            <p>Here is an example if statement:</p>
+            <pre><code>
+            if 10 > 5:
+            print("10 greater than 5")
+
+            print("Program ended")
+            </code></pre>
         </div>
+    </div>
+
+    <div class="col-md-12 grey">
+        <div class="content">
+            <h3>else Statements</h3>
+
+            <p>An else statement follows an if statement, and contains code that is called when the if statement evaluates to False.
+                As with if statements, the code inside the block should be indented.</p>
+
+            <pre><code>
+            x = 4
+            if x == 5:
+            print("Yes")
+            else:
+            print("No")
+            </code></pre>
+
+        </div>
+    </div>
+
+    <div class="col-md-12 ">
+        <div class="content">
+            <h3>Boolean Logic</h3>
+
+            <p>Boolean logic is used to make more complicated conditions for if statements that rely on more than one condition.
+            Python's Boolean operators are and, or, and not.
+                The and operator takes two arguments, and evaluates as True if, and only if, both of its arguments are True. Otherwise, it evaluates to False.</p>
+            <pre><code>
+            >>> 1 == 1 and 2 == 2
+            True
+            >>> 1 == 1 and 2 == 3
+            False
+            >>> 1 != 1 and 2 == 2
+            False
+            >>> 2 < 1 and 3 >  6
+            False
+                </code></pre>
+
+        </div>
+    </div>
+
+    <div class="col-md-12 grey">
+        <div class="content">
+            <h3>Operator Precedence</h3>
+
+            <p>Operator precedence is a very important concept in programming. It is an extension of the mathematical idea of order of operations (multiplication being performed before addition, etc.) to include other operators, such as those in Boolean logic.</p>
+
+            <p>The below code shows that == has a higher precedence than or:</p>
+
+            <pre><code>
+            >>> False == False or True
+            True
+            >>> False == (False or True)
+            False
+            >>> (False == False) or True
+            True
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="col-md-12 ">
+        <div class="content">
+            <h3>while Loops</h3>
+
+            <p>An if statement is run once if its condition evaluates to True, and never if it evaluates to False.
+            A while statement is similar, except that it can be run more than once. The statements inside it are repeatedly executed, as long as the condition holds. Once it evaluates to False, the next section of code is executed.
+                Below is a while loop containing a variable that counts up from 1 to 5, at which point the loop terminates.</p>
+
+            <pre><code>
+            i = 1
+            while i <=5:
+            print(i)
+            i = i + 1
+
+            print("Finished!")
+                </code></pre>
+
+        </div>
+    </div>
+
+    <div class="col-md-12 grey">
+        <div class="content">
+            <h3>Lists</h3>
+
+            <p>Lists are another type of object in Python. They are used to store an indexed list of items.
+            A list is created using square brackets with commas separating items.
+                The certain item in the list can be accessed by using its index in square brackets.</p>
+            <p>For example:
+            <pre><oode>
+            words = ["Hello", "world", "!"]
+            print(words[0])
+            print(words[1])
+            print(words[2])
+            </oode></pre>
+
+            <p>Result:</p>
+            <pre><oode>
+            >>>
+            Hello
+            world
+            !
+            >>>
+            </oode></pre>
+        </div>
+    </div>
+
+    <div class="col-md-12 ">
+        <div class="content">
+
+        </div>
+    </div>
 
     <iframe src="https://www.tutorialspoint.com/execute_python_online.php" id="tryPythonIframe" style="
     height: 504px;
