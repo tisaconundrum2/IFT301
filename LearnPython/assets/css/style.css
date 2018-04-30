@@ -21,10 +21,13 @@
 }
 
 .content {
-    padding-top: 20%;
     margin-bottom: auto;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.top-crop-add{
+    padding-top: 20%;
 }
 
 .small .content{
