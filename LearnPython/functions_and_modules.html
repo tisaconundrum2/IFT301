@@ -207,6 +207,46 @@
         </div>
     </div>
 
+    <div class="col-md-12">
+        <div class="content">
+            <h3>Namespaces and Scoping
+            </h3>
+            <p>Variables are names (identifiers) that map to objects. A namespace is a dictionary of variable names
+                (keys) and their corresponding objects (values).
+
+            <p>A Python statement can access variables in a local namespace and in the global namespace. If a local and
+                a global variable have the same name, the local variable shadows the global variable.
+
+            <p>Each function has its own local namespace. Class methods follow the same scoping rule as ordinary
+                functions.
+
+            <p>Python makes educated guesses on whether variables are local or global. It assumes that any variable
+                assigned a value in a function is local.
+
+            <p></p>Therefore, in order to assign a value to a global variable within a function, you must first use the
+            global statement.
+
+            <p>The statement global VarName tells Python that VarName is a global variable. Python stops searching the
+                local namespace for the variable.
+
+            <p>For example, we define a variable Money in the global namespace. Within the function Money, we assign
+                Money a value, therefore Python assumes Money as a local variable. However, we accessed the value of the
+                local variable Money before setting it, so an UnboundLocalError is the result. Uncommenting the global
+                statement fixes the problem.
+            <pre><code>
+            Money = 2000
+            def AddMoney():
+            # Uncomment the following line to fix the code:
+            # global Money
+            Money = Money + 1
+
+            print Money
+            AddMoney()
+            print Money
+            </code></pre>
+        </div>
+    </div>
+
     <iframe src="https://www.tutorialspoint.com/execute_python_online.php" id="tryPythonIframe" style="
     height: 504px;
 "></iframe>
