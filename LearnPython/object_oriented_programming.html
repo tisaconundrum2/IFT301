@@ -183,6 +183,165 @@
             <p><code>__name__</code> − Class name.
             <p><code>__module__</code> − Module name in which the class is defined. This attribute is "__main__" in interactive mode.
             <p><code>__bases__</code> − A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
+            <p>For the above class let us try to access all these attributes −
+            <pre><code>
+            class Employee:
+               'Common base class for all employees'
+               empCount = 0
+
+               def __init__(self, name, salary):
+                  self.name = name
+                  self.salary = salary
+                  Employee.empCount += 1
+
+               def displayCount(self):
+                 print "Total Employee %d" % Employee.empCount
+
+               def displayEmployee(self):
+                  print "Name : ", self.name,  ", Salary: ", self.salary
+
+            print "Employee.__doc__:", Employee.__doc__
+            print "Employee.__name__:", Employee.__name__
+            print "Employee.__module__:", Employee.__module__
+            print "Employee.__bases__:", Employee.__bases__
+            print "Employee.__dict__:", Employee.__dict__
+            </code></pre>
+            <p>When the above code is executed, it produces the following result −
+
+            <pre><code>
+            Employee.__doc__: Common base class for all employees
+            Employee.__name__: Employee
+            Employee.__module__: __main__
+            Employee.__bases__: ()
+            Employee.__dict__: {'__module__': '__main__', 'displayCount':
+            &lt;function displayCount at 0xb7c84994&gt;, 'empCount': 2,
+            'displayEmployee': &lt;function displayEmployee at 0xb7c8441c&gt;,
+            '__doc__': 'Common base class for all employees',
+            '__init__': &lt;function __init__ at 0xb7c846bc&gt;}
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="content">
+            <h3>Destroying Objects (Garbage Collection)</h3>
+            <p>Python deletes unneeded objects (built-in types or class instances) automatically to free the memory
+                space. The process by which Python periodically reclaims blocks of memory that no longer are in use is
+                termed Garbage Collection.
+
+            <p></p>Python's garbage collector runs during program execution and is triggered when an object's reference
+            count reaches zero. An object's reference count changes as the number of aliases that point to it changes.
+
+            <p>An object's reference count increases when it is assigned a new name or placed in a container (list,
+                tuple, or dictionary). The object's reference count decreases when it's deleted with del, its reference
+                is reassigned, or its reference goes out of scope. When an object's reference count reaches zero, Python
+                collects it automatically.
+            <pre><code>
+            a = 40      # Create object <40>
+            b = a       # Increase ref. count  of <40>
+            c = [b]     # Increase ref. count  of <40>
+
+            del a       # Decrease ref. count  of <40>
+            b = 100     # Decrease ref. count  of <40>
+            c[0] = -1   # Decrease ref. count  of <40>
+            </code></pre>
+            <p>You normally will not notice when the garbage collector destroys an orphaned instance and reclaims its space. But a class can implement the special method __del__(), called a destructor, that is invoked when the instance is about to be destroyed. This method might be used to clean up any non memory resources used by an instance.
+
+            <h3>Example</h3>
+            <p>This <code>__del__()</code> destructor prints the class name of an instance that is about to be destroyed −
+            <pre><code>
+            class Point:
+               def __init__( self, x=0, y=0):
+                  self.x = x
+                  self.y = y
+               def __del__(self):
+                  class_name = self.__class__.__name__
+                  print class_name, "destroyed"
+
+            pt1 = Point()
+            pt2 = pt1
+            pt3 = pt1
+            print id(pt1), id(pt2), id(pt3) # prints the ids of the obejcts
+            del pt1
+            del pt2
+            del pt3
+            </code></pre>
+            <p>When the above code is executed, it produces following result −
+            <pre><code>
+            3083401324 3083401324 3083401324
+            Point destroyed
+            </code></pre>
+            <p><b>Note</b> − Ideally, you should define your classes in separate file, then you should import them in your main program file using import statement.
+        </div>
+    </div>
+
+    <div class="col-md-12 grey">
+        <div class="content">
+            <h3>Class Inheritance</h3>
+            <p>Instead of starting from scratch, you can create a class by deriving it from a preexisting class by listing the parent class in parentheses after the new class name.
+
+            <p>The child class inherits the attributes of its parent class, and you can use those attributes as if they were defined in the child class. A child class can also override data members and methods from the parent.
+
+            <h3>Syntax</h3>
+            <p>Derived classes are declared much like their parent class; however, a list of base classes to inherit from is given after the class name −
+            <pre><code>
+            class SubClassName (ParentClass1[, ParentClass2, ...]):
+               'Optional class documentation string'
+               class_suite
+            </code></pre>
+            <h3>Example</h3>
+            <pre><code>
+            class Parent:        # define parent class
+               parentAttr = 100
+               def __init__(self):
+                  print "Calling parent constructor"
+
+               def parentMethod(self):
+                  print 'Calling parent method'
+
+               def setAttr(self, attr):
+                  Parent.parentAttr = attr
+
+               def getAttr(self):
+                  print "Parent attribute :", Parent.parentAttr
+
+            class Child(Parent): # define child class
+               def __init__(self):
+                  print "Calling child constructor"
+
+               def childMethod(self):
+                  print 'Calling child method'
+
+            c = Child()          # instance of child
+            c.childMethod()      # child calls its method
+            c.parentMethod()     # calls parent's method
+            c.setAttr(200)       # again call parent's method
+            c.getAttr()          # again call parent's method
+
+            </code></pre>
+            <p>When the above code is executed, it produces the following result −
+            <pre><code>
+            Calling child constructor
+            Calling child method
+            Calling parent method
+            Parent attribute : 200
+        </code></pre>
+            <p>Similar way, you can drive a class from multiple parent classes as follows −
+            <pre><code>
+            class A:        # define your class A
+            .....
+
+            class B:         # define your class B
+            .....
+
+            class C(A, B):   # subclass of A and B
+            .....
+        </code></pre>
+            <p>You can use issubclass() or isinstance() functions to check a relationships of two classes and instances.
+
+            <p>The <code>issubclass(sub, sup)</code> boolean function returns true if the given subclass sub is indeed a subclass of the superclass sup.
+
+            <p>The <code>isinstance(obj, Class)</code> boolean function returns true if obj is an instance of class Class or is an instance of a subclass of Class
         </div>
     </div>
     <iframe src="https://www.tutorialspoint.com/execute_python_online.php" id="tryPythonIframe" style="
