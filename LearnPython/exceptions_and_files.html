@@ -122,6 +122,92 @@
         </div>
     </div>
 
+    <div class="col-md-12">
+        <div class="content">
+            <h3>Python - Files I/O</h3>
+            <p>This chapter covers all the basic I/O functions available in Python. For more functions, please refer to
+                standard Python documentation.
+            <h3>Printing to the Screen</h3>
+            <p>The simplest way to produce output is using the print statement where you can pass zero or more
+                expressions separated by commas. This function converts the expressions you pass into a string and
+                writes the result to standard output as follows −
+            <pre><code>
+            print "Python is really a great language,", "isn't it?"
+            </code></pre>
+            <p>This produces the following result on your standard screen −
+            <pre><code>
+            Python is really a great language, isn't it?
+            </code></pre>
+
+        </div>
+    </div>
+
+    <div class="col-md-12 grey">
+        <div class="content">
+            <h3>Reading Keyboard Input</h3>
+            <p>Python provides two built-in functions to read a line of text from standard input, which by default comes
+                from the keyboard. These functions are
+            <p>raw_input
+            <p>input
+
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="content">
+            <h3>The raw_input Function</h3>
+            <p>The raw_input([prompt]) function reads one line from standard input and returns it as a string (removing
+                the trailing newline).
+            <pre><code>
+            str = raw_input("Enter your input: ");
+            print "Received input is : ", str
+            </code></pre>
+            <p>This prompts you to enter any string and it would display same string on the screen. When I typed "Hello
+                Python!", its output is like this −
+            <pre><code>
+            Enter your input: Hello Python
+            Received input is :  Hello Python
+            </code></pre>
+
+        </div>
+    </div>
+
+    <div class="col-md-12 grey">
+        <div class="content">
+            <h3>The input Function</h3>
+            <p>The input([prompt]) function is equivalent to raw_input, except that it assumes the input is a valid Python expression and returns the evaluated result to you.</p>
+            <pre><code>
+            str = input("Enter your input: ");
+            print "Received input is : ", str
+            </code></pre>
+            <p>This would produce the following result against the entered input −</p>
+            <pre><code>
+            Enter your input: [x*5 for x in range(2,10,2)]
+            Recieved input is :  [10, 20, 30, 40]
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="content">
+            <h3>Opening and Closing Files</h3>
+            <p>Until now, you have been reading and writing to the standard input and output. Now, we will see how to use actual data files.
+            <p>Python provides basic functions and methods necessary to manipulate files by default. You can do most of the file manipulation using a file object.
+            <h3>The open Function</h3>
+            <p>Before you can read or write a file, you have to open it using Python's built-in open() function. This function creates a file object, which would be utilized to call other support methods associated with it.
+            <h3>Syntax</h3>
+            <pre><code>
+            file object = open(file_name [, access_mode][, buffering])
+                </code></pre>
+            <p>Here are parameter details −
+            <p><code>file_name</code> − The file_name argument is a string value that contains the name of the file that you want to access.
+            <p><code>access_mode</code> − The access_mode determines the mode in which the file has to be opened, i.e., read, write, append, etc. A complete list of possible values is given below in the table. This is optional parameter and the default file access mode is read (r).
+            <p><code>buffering</code> − If the buffering value is set to 0, no buffering takes place. If the buffering value is 1, line buffering is performed while accessing a file. If you specify the buffering value as an integer greater than 1, then buffering action is performed with the indicated buffer size. If negative, the buffer size is the system default(default behavior).
+
+
+        </div>
+    </div>
+
     <iframe src="https://www.tutorialspoint.com/execute_python_online.php" id="tryPythonIframe" style="
     height: 504px;
 "></iframe>
