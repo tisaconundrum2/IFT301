@@ -35,36 +35,62 @@
 <div class="container" style="padding-top: 50px">
     <div class="col-md-12 grey">
             <div class="content">
-                <h3>Your First Program</h3>
-
-                <p>Let's start off by creating a short program that displays "Hello world!".
-                In Python, we use the print statement to output text:
-
-                <pre><code>
-                >>> print('Hello world!')
-                Hello world!
-                </code></pre>
-
-                <p>Try it below
-
-                </p>
+                <h3>Overview of OOP Terminology</h3>
+                <p><code>Class</code> − A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
+                <p><code>Class variable</code> − A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class's methods. Class variables are not used as frequently as instance variables are.
+                <p><code>Data member</code> − A class variable or instance variable that holds data associated with a class and its objects.
+                <p><code>Function overloading</code> − The assignment of more than one behavior to a particular function. The operation performed varies by the types of objects or arguments involved.
+                <p><code>Instance variable</code> − A variable that is defined inside a method and belongs only to the current instance of a class.
+                <p><code>Inheritance</code> − The transfer of the characteristics of a class to other classes that are derived from it.
+                <p><code>Instance</code> − An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.
+                <p><code>Instantiation</code> − The creation of an instance of a class.
+                <p><code>Method</code> − A special kind of function that is defined in a class definition.
+                <p><code>Object</code> − A unique instance of a data structure that's defined by its class. An object comprises both data members (class variables and instance variables) and methods.
+                <p><code>Operator overloading</code> − The assignment of more than one function to a particular operator.
             </div>
         </div>
 
     <div class="col-md-12 ">
             <div class="content">
-                <h3>Printing Text</h3>
+                <h3>Creating Classes</h3>
+                <p>The class statement creates a new class definition. The name of the class immediately follows the keyword class followed by a colon as follows −
 
-                <p>The print statement can also be used to output multiple lines of text.
-                    For Example:</p>
                 <pre><code>
-                >>> print('Hello world!')
-                Hello world!
-                >>> print('Hello world!')
-                Hello world!
-                >>> print('Spam and eggs...')
-                Spam and eggs...
+                class ClassName:
+                    'Optional class documentation string'
+                    class_suite
                 </code></pre>
+
+                <p>The class has a documentation string, which can be accessed via ClassName.__doc__.
+
+                <p>The class_suite consists of all the component statements defining class members, data attributes and functions.
+
+                <h3>Example</h3>
+                <p>Following is the example of a simple Python class −
+
+                    <pre><code>
+                class Employee:
+                    'Common base class for all employees'
+                    empCount = 0
+
+                    def __init__(self, name, salary):
+                        self.name = name
+                        self.salary = salary
+                        Employee.empCount += 1
+
+                    def displayCount(self):
+                        print "Total Employee %d" % Employee.empCount
+
+                    def displayEmployee(self):
+                        print "Name : ", self.name,  ", Salary: ", self.salary
+                    </code></pre>
+                <p>The variable empCount is a class variable whose value is shared among all instances of a this class. This can be accessed as Employee.empCount from inside the class or outside the class.
+
+                <p>The first method <code>__init__()</code> is a special method, which is called class constructor or initialization method that Python calls when you create a new instance of this class.
+
+                <p>You declare other class methods like normal functions with the exception that the first argument to each method is self. Python adds the self argument to the list for you; you do not need to include it when you call the methods.
+
+
             </div>
         </div>
 
